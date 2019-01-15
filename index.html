@@ -11,20 +11,32 @@
         align-items: center;
         height: 100vh;
       }
+      .wrapper{
+        max-width: 100%;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+      }
       .descripcion {
         position: absolute;
-        top: 100px;
-        left: calc(50% - 150px);
+        top: 50px;
+        left: calc(50% - 200px);
         color: darkgray;
+        font-size: 3vh;
       }
       .gameboard {
         height: 100vh;
         width: 100vh;
         border-radius: 50%;
         overflow: hidden;
-        margin: 0 auto;
+        margin:auto;
+        position: absolute;
         max-height: 60vh;
         max-width: 60vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         border: 10px solid gray;
       }
       .color {
@@ -67,11 +79,12 @@
         height: 100px;
         background: #ecf0f1;
         color: #2c3e50;
-        font-size: 2.5rem;
+        font-size: 3rem;
         position: absolute;
         border-radius: 20px;
         top: calc(50% - 50px);
         left: calc(50% - 200px);
+        min-width: 400px;
       }
       .hide {
         display: none;
@@ -83,6 +96,7 @@
   </head>
   <body>
       <h2 class="descripcion"> Repite el patron de color 🤓 </h2>
+      <div class="wrapper">
     <div class="gameboard">
       
       <div id="celeste" class="color celeste left" data-color="celeste"></div>
@@ -91,6 +105,7 @@
       <div id="verde" class="color verde right" data-color="verde"></div>
       <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">🤞Jugar!🤟</button>
     </div>
+  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
     <script>
       const celeste = document.getElementById('celeste')
